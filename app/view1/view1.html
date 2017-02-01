@@ -1,0 +1,12 @@
+<div class="jumbotron"> 
+
+    <form ng-submit="getGists(username,true)">
+        <input ng-model="username" type="text" class="form-control" placeholder="GitHub Username">
+    </form>
+
+    <info user="user" gists="gists"></info>
+    <p>
+    </p>
+                  
+</div>
+<gist ng-repeat="gist in gists" gist="gist"></gist>

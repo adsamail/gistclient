@@ -1,0 +1,59 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 14, 2015, 1:36:54 PM
+    Author     : adam
+*/
+
+.gist{
+    background-color: #EEE;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+gist .code{
+    max-height:300px;
+    overflow: hidden; 
+}
+
+pre, .hljs{
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+gist .language{
+    font-size:100%;
+    margin-left: 10px;
+    float: right;
+}
+
+gist .description{
+    width: 50%;
+    float: left;
+    margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+gist .filename{
+    float: left;
+    margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+gist .avatar {
+	width: 30px;
+	height: 30px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+        float: right;
+        margin-right: 5px;
+}

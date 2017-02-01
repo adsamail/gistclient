@@ -1,0 +1,24 @@
+
+<div class="gist" ng-click="toggle()">
+    <div   class="panel-body">
+        <div  ng-show= "expanded" ng-repeat="file in gist.filesData" class="slide">
+            <div class="panel panel-default" >
+                <div class="code" hljs source="'{{file.source}}'" ></div>
+                <div class="panel-footer" >
+                    <a href="{{file.raw_url}}"  stop-event='click' target="_blank"> <span class="glyphicon glyphicon-file"></span> {{file.filename}}</a> <span class="label language" ng-style="{'background-color':color(getLanguage(file))}" >{{getLanguage(file)}}</span>
+                </div>
+            </div>
+        </div>
+        <p ng-if="gist.description == '' || gist.description == null" ng-repeat="file in gist.filesData" class="filename">{{file.filename}}{{$last ?  "" : ",&nbsp;"}}</p>
+        <p class="description">{{gist.description}}</p>
+        <div>
+            <span ng-if="!expanded" ng-repeat="file in gist.filesData| unique: 'language'" class="label language" ng-style="{'background-color':color(getLanguage(file))}" >{{getLanguage(file)}}</span>
+            <div ng-repeat="fork in gist.forks| limitTo:3"  stop-event='click' >
+                <a href="{{fork.html_url}}" >
+                    <img  class="avatar" src="{{fork.owner.avatar_url}}"  data-toggle="tooltip" data-placement="bottom" title="{{fork.owner.login}} fork" tooltip/>
+                </a> 
+            </div>
+        </div>
+    </div>
+
+</div>
